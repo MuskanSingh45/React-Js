@@ -1,25 +1,25 @@
 import React from 'react'
 
-const Card = (props) => {
+const Card = ({picture, name, gender, location, email, onCardClick}) => {
 
   return (
     <div className='card'>
 
     <div>
                 <div className="top">
-                    <img src={props.picture} alt="" />
+                    <img src={picture} alt="" />
                 </div>
                 <div className="center">
-                    <h3>{props.name} <span>{props.gender}</span></h3>
-                    <h2>{props.location}</h2>
+                    <h3>{name} <span>{gender}</span></h3>
+                    <h2>{location}</h2>
                     <div className='tag'>
-                        <h4>{props.email}</h4>
+                        <h4>{email}</h4>
                     </div>
                 </div>
             </div>
 
      <div className="bottom">
-                <button onClick={props.onCardClick}>Click</button>
+                <button onClick={onCardClick}>Click</button>
             </div>
 
      </div>
